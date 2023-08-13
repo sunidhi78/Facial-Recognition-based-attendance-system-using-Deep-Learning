@@ -1,0 +1,115 @@
+/* Reset some default styles to start with a clean slate */
+body, h1, p, div {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100vh; /* Make the container full viewport height */
+    
+  }
+  
+  .long-box {
+    width: 380px; /* Adjust the width as needed */
+    height: 700px; /* Adjust the height to make it 'long' */
+    background-color:rgb(149, 208, 228); /* Example background color */
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 15px; /* Adjust the radius as needed */
+    
+  } 
+  .grey-box {
+        width: 320px; /* Adjust the width of the grey box */
+        height: 400px; /* Adjust the height of the grey box */
+        background-color: #f4f0ec; /* Grey background color */
+        border: 1px solid #F0F0F0; /* Example border */
+        position: absolute; /* Position the grey box relative to its parent */
+        bottom: 272px; /* Adjust the distance from the bottom */
+        left: 50%; /* Horizontally center the grey box within the parent */
+        transform: translateX(-50%); /* Adjust to perfectly center the grey box */
+        border-radius: 10px; /* Adjust the radius as needed */
+      }
+   
+.circle {
+    width: 32px; /* Adjust the circle size as needed */
+    height: 32px; /* Adjust the circle size as needed */
+    background-color: white; /* Example circle color */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute; /* Position the circle relative to the long-box */
+    left: 50%; /* Horizontally center the circle within the long-box */
+    top: 33px; /* Position at the top of the long-box */
+    transform: translateX(-50%); /* Adjust to perfectly center the circle */
+}
+/* The switch - the box around the slider */
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 155px;
+    height: 68px;
+    bottom: 54px; /* Adjust the distance from the bottom */
+    left: 45%; /* Horizontally center the toggle */
+
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#D3D3D3;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 55px;
+    width: 58px;
+    left: 7px;
+    bottom: 7px;
+    background-color: rgb(60, 60, 60);
+    -webkit-transition: .4s;
+    transition: .5s;
+  }
+  
+  input:checked + .slider {
+    background-color: #f4f0ec;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(36px);
+    transform: translateX(85px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 80%;
+  }
+    
+  
+  
+  
+  
+  
